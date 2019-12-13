@@ -64,19 +64,13 @@ def sentiment_score(news_text,sent_dict):
         list1 = txt.split(" ")
 
         for w in list1:
-
             word = w.lower().strip(' \t\n\r')
-
-
             if word not in excludelist:
-
-
                 #word_root = lemma.lemmatize(word,'v')
                 #word_root = sno.stem(word)
                 #word_root=st.stem(word)
 
                 word_root= word
-
                 if  word_root in sent_dict:
                     rnk = int(sent_dict[word_root])
                 else:
